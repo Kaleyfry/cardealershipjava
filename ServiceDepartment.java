@@ -22,6 +22,9 @@ public class ServiceDepartment extends Department {
     // Create "association" between Vehicle and ServiceDepartment
     // Very loose, lifetime of objects are independent of one another
     public boolean changeEngineOil(Vehicle v) {
+        // Because ServiceDepartment doesn't "own" the lifetime of the object it's good
+        // practice to ensure a valid object has been passed in
+
         if (v != null) {
             return true;
         } else {
